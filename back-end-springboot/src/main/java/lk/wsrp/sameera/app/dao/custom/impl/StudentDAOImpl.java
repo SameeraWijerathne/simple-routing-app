@@ -30,7 +30,7 @@ public class StudentDAOImpl implements StudentDAO {
     public Student save(Student student) throws Exception {
         KeyHolder kh = new GeneratedKeyHolder();
         jdbcTemplate.update(con ->{
-            PreparedStatement stm = con.prepareStatement("INSERT INTO student (name, address) VALUES (?,?,?)", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement stm = con.prepareStatement("INSERT INTO student (name, address) VALUES (?,?)", Statement.RETURN_GENERATED_KEYS);
             stm.setString(1, student.getName());
             stm.setString(2, student.getAddress());
             return stm;

@@ -18,7 +18,6 @@ public class StudentHttpController {
         this.studentBO = studentBO;
     }
 
-    @ResponseStatus(HttpStatus.NO_CONTENT)
     @GetMapping
     public List<StudentDTO> getAllStudents() throws Exception {
         return studentBO.getAllStudents();
