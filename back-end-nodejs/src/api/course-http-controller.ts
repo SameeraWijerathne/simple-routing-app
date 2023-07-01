@@ -24,3 +24,8 @@ router.post('/', async (req, res)=>{
         [course.id, course.description, course.duration]);
     res.status(201).json(course);
 });
+
+router.delete('/:courseId', async (req, res)=>{
+    const result = await pool.query("DELETE FROM course WHERE id=?", [req.params.courseId]);
+    res.sendStatus(result.affectedRows ? 204 : 404);
+});
