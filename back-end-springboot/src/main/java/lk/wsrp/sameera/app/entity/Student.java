@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Student {
+public class Student implements SuperEntity{
     private int id;
     private String name;
     private String address;
