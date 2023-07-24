@@ -14,6 +14,9 @@ import {RouterModule, Routes} from "@angular/router";
 import { ManageStudentsComponent } from './manage-students/manage-students.component';
 import { ManageCoursesComponent } from './manage-courses/manage-courses.component';
 import {FormsModule} from "@angular/forms";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
 
 const routes: Routes = [
   {
@@ -42,7 +45,10 @@ const routes: Routes = [
     MatListModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
